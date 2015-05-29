@@ -40,7 +40,7 @@ game.PlayerEntity = me.Entity.extend({
     addAnimation: function() {
         this.renderable.addAnimation("idle", [78]);
         this.renderable.addAnimation("walk", [117, 118, 119, 120, 121, 122, 123, 124, 125], 80);
-        this.renderable.addAnimation("attack", [65, 66, 67, 68, 69, 70, 71, 72], 80);
+        this.renderable.addAnimation("attack", [170, 171, 172, 173, 174], 80);
     },
     update: function(delta) {
         this.now = new Date().getTime();
@@ -68,16 +68,16 @@ game.PlayerEntity = me.Entity.extend({
         else {
             this.body.vel.x = 0;
         }
-        
-        if (me.input.isKeyPressed('up'))  {
-         if (!this.body.jumping && !this.body.falling)  {
+
+        if (me.input.isKeyPressed('up')) {
+            if (!this.body.jumping && !this.body.falling) {
                 this.jump();
-         }
-     }
-        
+            }
+        }
+
         this.attacking = me.input.isKeyPressed("attack");
     },
-    jump: function(){
+    jump: function() {
         this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
         this.body.jumping = true;
     },
@@ -148,9 +148,8 @@ game.PlayerEntity = me.Entity.extend({
             this.lastHit = this.now;
             response.b.loseHealth(game.data.playerAttack);
         }
-        },
-
-        collideWithEnemyCreep: function(response){
+    },
+    collideWithEnemyCreep: function(response) {
         var xdif = this.pos.x - response.b.pos.x;
         var ydif = this.pos.y - response.b.pos.y;
 
@@ -172,7 +171,7 @@ game.PlayerEntity = me.Entity.extend({
             if (this.facing === "right") {
                 this.body.vel.x = 0;
             }
-       }
+        }
     },
     checkAttack: function(xdif, ydif) {
         if (this.renderable.isCurrentAnimation("attack") && this.now - this.lastHit >= game.data.playerAttackTimer

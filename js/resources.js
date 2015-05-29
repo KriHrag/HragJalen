@@ -8,14 +8,14 @@ game.resources = [
     {name: "item-spritesheet", type: "image", src: "data/img/item-spritesheet.png"},
     //{name: "mk", type: "image", src: "data/img/mk.png"},
     {name: "title-screen", type: "image", src: "data/img/mk3.jpg"},
-    {name: "player", type: "image", src: "data/img/wizard.png"},
+    {name: "player", type: "image", src: "data/img/skeletonDagger.png"},
     {name: "tower", type: "image", src: "data/img/tower_round.svg.png"},
     {name: "creep1", type: "image", src: "data/img/brainmonster.png"},
     //{name: "title-screen", type: "image", src: "data/img/title.png"},
-    {name: "minimap3", type: "image", src: "data/img/minimap3.png"},
+    {name: "mkmap", type: "image", src: "data/img/mkmap.png"},
     {name: "exp-screen", type: "image", src: "data/img/loadpic.png"},
     {name: "gold-screen", type: "image", src: "data/img/spend.png"},
-    {name: "load-screen", type: "image", src: "data/img/loadpic.png"},
+    {name: "load-screen", type: "image", src: "data/img/mk4.png"},
     {name: "new-screen", type: "image", src: "data/img/mk5.jpeg"},
     { name: "pause", type: "image", src: "data/img/pause.png"},
     { name: "magic", type: "image", src: "data/img/magic.png" },
@@ -29,7 +29,7 @@ game.resources = [
      * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
      * {name: "example01", type: "tmx", src: "data/map/example01.json"},
      */
-    {name: "level01", type: "tmx", src: "data/map/test.tmx"},
+    {name: "level01", type: "tmx", src: "data/map/mk.tmx"},
     /* Background music. 
      * @example
      * {name: "example_bgm", type: "audio", src: "data/bgm/"},

@@ -8,7 +8,7 @@ game.PlayScreen = me.ScreenObject.extend({
 
         me.levelDirector.loadLevel("level01");
 
-        this.resetPlayer(0, 420);
+        this.resetPlayer(1, 210);
 
         var gameTimerManager = me.pool.pull("GameTimerManager", 500, 0, {});
         me.game.world.addChild(gameTimerManager, 0);
@@ -49,8 +49,11 @@ game.PlayScreen = me.ScreenObject.extend({
     resetPlayer: function(x, y) {
         game.data.player = me.pool.pull("player", x, y, {});
         me.game.world.addChild(game.data.player, 20);
-        game.data.miniPlayer = me.pool.pull("miniplayer", 10, 10, {});
-        me.game.world.addChild(game.data.miniPlayer, 31);
+        
+        
+        
+        //game.data.miniPlayer = me.pool.pull("miniplayer", 10, 10, {});
+        //me.game.world.addChild(game.data.miniPlayer, 31);
     }
 
 });
